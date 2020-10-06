@@ -2,4 +2,4 @@
 
 ## description
 
-A Javascript drum kit that is built using JavaScript. Is it based on a project from Wes Bos's JavaScript 30.
+A basic drum kit that is built using JavaScript. It is based on a project from Wes Bos's JavaScript 30.
