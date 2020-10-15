@@ -1,6 +1,6 @@
 // note: backticks let us put in expression (${..}); called 'templated liberals'
 
-window.addEventListener('keydown', function(e) {
+function playSound(e) {
     // console.log(e.keyCode);
 
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // holds most recently pressed, valid key
@@ -12,7 +12,7 @@ window.addEventListener('keydown', function(e) {
     key.classList.add('playing');
     // console.log(e);
 
-});
+}
 
 // remove transition after it's ended
 function removeTransition(e) {
@@ -22,4 +22,6 @@ function removeTransition(e) {
 }
 
 const keys = document.querySelectorAll('.key');
-keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //each key gets event listener added to it, then ends transition event after completed
+
+window.addEventListener('keydown', playSound);
+keys.forEach(key => key.addEventListener('transitionend', removeTransition)); // add event listener to each key and ends transition event after completed
